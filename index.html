@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <script src="paralax.js"></script>
+   <title>Sajjad Sheykhi</title>
+   <link rel="stylesheet" href="style.css">
+  
+</head>
+
+
+<header>
+   
+   <nav class="sidebar" style="display: none;">
+      <ul>
+         
+         <li onclick="closeSidebar(event)"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+         <li><a href="#about">Home</a></li>
+         <li><a href="#education">Education</a></li>
+         <li><a href="#project">Projects</a></li>
+         <li><a href="#skills">Skills</a></li>
+      </ul>
+   </nav>
+    
+   <nav>
+      <ul>
+         <li class=""><a href="#">S.Sheykhi</a></li>
+         <li class="hideOnMobile"><a href="#about">Home</a></li>
+         <li class="hideOnMobile"><a href="#education">Education</a></li>
+         <li class="hideOnMobile"><a href="#project">Projects</a></li>
+         <li class="hideOnMobile"><a href="#skills">Experience</a></li>
+         <li class="menu-button" onclick="showSidebar(event)"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+      </ul>
+   </nav>
+   
+   <script>
+      function showSidebar(event) {
+         event.preventDefault(); // Prevent the default link behavior
+         const sidebar = document.querySelector('.sidebar');
+         sidebar.style.display = 'flex';
+      }
+   
+      function closeSidebar(event) {
+         event.preventDefault(); // Prevent the default link behavior
+         const sidebar = document.querySelector('.sidebar');
+         sidebar.style.display = 'none';
+      }
+   </script> 
+</header>
+
+
+
+<body>
+ 
+   <section id="about">
+      <div class="grid-container">
+          <!-- Futuristic Text Box -->
+          <div class="about-text">
+              <div class="text-box">
+                  <h2>Hello,</h2>
+                  <p>
+                     Welcome to my space station! Explore a digital frontier where ideas take off and creativity has no limits. 
+                     Use the solor system on your right to connect to my socials , and  look around to discover what fuels my passion for innovation.
+                  </p>   
+
+              </div>
+          </div>
+          <div class="about-image">
+              <img src="" alt="Your Photo">
+         </div>
+         
+      </div>
+      <div class="solar-system">
+         <!-- Center of the solar system -->
+         <div class="center"></div>
+     
+         <!-- Instagram Planet -->
+         <a href="https://www.instagram.com/akasayan/" target="_blank" class="planet instagram">
+             <img src="assets/instagram.png" alt="Instagram">
+         </a>
+     
+         <!-- LinkedIn Planet -->
+         <a href="https://www.linkedin.com/in/sajjad-sheykhi-a024b7211/" target="_blank" class="planet linkedin">
+             <img src="assets/link.png" alt="LinkedIn">
+         </a>
+
+         <!-- Git-hub -->
+         <a href="https://github.com/SajjadSheykhi" target="_blank" class="planet github">
+            <img src="assets/github3.png" alt="Github">
+        </a>
+        
+     </div>
+
+     <a href="#contact" class="cta-button">Leave the station</a>
+
+   </section>
+
+   <section class="education-constellation" id="education">
+
+        <div class="text-box2"> 
+            <h2>My education Path</h2>
+            <p>Hover over a planet to enlarge it, and click to view more details about that milestone.</p>
+        </div>
+      
+  
+      <div class="constellation-container">
+          <svg class="constellation-lines" preserveAspectRatio="xMidYMid meet">
+              <line x1="20%" y1="50%" x2="40%" y2="30%"/>
+              <line x1="40%" y1="30%" x2="60%" y2="50%"/>
+              <line x1="60%" y1="50%" x2="80%" y2="60%"/>
+          </svg>
+  
+          <div class="planet-wrapper" style="left:20%; top:50%;">
+              <div class="planet2" data-title="High School" data-info="High School diploma and Early interest in technology">
+                  <span class="planet2-text">Beverly Hills High School</span>
+              </div>
+          </div>
+  
+          <div class="planet-wrapper" style="left:40%; top:30%;">
+              <div class="planet2" data-title="University" data-info="BS. in Computer science.  Expected may 2026">
+                  <span class="planet2-text">Arizona State University</span>
+              </div>
+          </div>
+  
+          <div class="planet-wrapper" style="left:60%; top:50%;">
+              <div class="planet2" data-title="Grad School" data-info="Completed Cybersecurity Bootcamp at CALTECH. ">
+                  <span class="planet2-text">CALTECH</span>
+              </div>
+          </div>
+  
+          <div class="planet-wrapper" style="left:80%; top:60%;">
+              <div class="planet2" data-title="Online Courses" data-info="Continual skill upgrades...">
+                  <span class="planet2-text">Grad School: planned</span>
+              </div>
+          </div>
+      </div>
+  
+      <div class="planet2-tooltip"></div>
+      <div class="detail-modal" style="display:none;">
+          <div class="detail-content">
+              <h3 class="detail-title"></h3>
+              <p class="detail-description"></p>
+              <button class="close-modal">Close</button>
+          </div>
+      </div>
+  </section>
+
+  <!-- Projects Section with 3D Flip-Cards -->
+<section class="my-projects-section" id="Project">
+    <h2 class="my-projects-title">Projects</h2>
+    
+    <div class="my-projects-grid">
+      <!-- Card 1 -->
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <h3>Profolio Website</h3>
+          </div>
+          <div class="flip-card-back">
+            <h3>Profolio Website</h3>
+            <p>Created a Profolio Website using using HTML/CSS, JavaScript </p>
+            <a href="https://github.com/YourGitHubUsername/ProjectAlpha" target="_blank">
+              View on GitHub
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Card 2 -->
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <h3>Autonomous Multi-Robot Housekeeping System</h3>
+            <p></p>
+          </div>
+          <div class="flip-card-back">
+            <h3>Project Beta</h3>
+            <p>
+              Collaborated in a 5-person team to design and prototype a suite of four autonomous home-cleaning robots
+            </p>
+            <a href="https://github.com/YourGitHubUsername/ProjectBeta" target="_blank">
+              View on GitHub
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Card 3 (add or remove as needed) -->
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <h3>Securing Splunk</h3>
+            <p></p>
+          </div>
+          <div class="flip-card-back">
+            <h3>Securing Splunk</h3>
+            <p>Ensuring Confidentiality and Integrity of Critical Configuration Files.</p>
+            <a href="https://github.com/YourGitHubUsername/ProjectGamma" target="_blank">
+              View on GitHub
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+
+
+
+
+
+
+
+<section class="skills">
+    <div class="skills-content">
+      <h2>Skills</h2>
+      <p>Here’s a list of programming languages and technologies I specialize in:</p>
+    </div>
+    
+    <div class="skills-grid ">
+      <div class="skill-item">C++</div>
+      <div class="skill-item">C</div>
+      <div class="skill-item ">Python</div>
+      <div class="skill-item">JavaScript</div>
+      <div class="skill-item">Java</div>
+      <div class="skill-item">HTML/CSS</div>
+      <div class="skill-item">React</div>
+      <div class="skill-item">Linux</div>
+      <div class="skill-item">React</div>
+      <div class="skill-item">Node.js</div>
+      <div class="skill-item">Node.js</div>
+
+    </div>
+  </section>
+  
+  
+
+
+
+
+
+
+   
+   <div class="paralax">
+      <div class="paralax-item p-item1"></div>
+      <div class="paralax-item p-item2"></div>
+      <div class="paralax-item p-item3"></div>
+      <div class="paralax-item p-item4"></div>
+      <div class="paralax-item p-item4"></div>
+   </div>   
+   
+   
+   <div class="container">
+   <div class="content-header" id="">
+      <h1>
+      </h1>
+      <h2></h2>
+
+      <div class="container">
+         <div class="content-header" id="">
+            <h1>
+            </h1>
+            <h2></h2>
+            </div>
+         </div>
+      </div>
+   </div>
+
+   
+   
+ </body>
+</html>
+
+

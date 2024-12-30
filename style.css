@@ -1,0 +1,1701 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@400;500;600;700;800&display=swap');
+      .body{
+         overflow-x: hidden;
+         overflow-y: hidden;
+      }
+      @font-face {
+
+         font-family: 'CustomFont'; /* The name you want to use for the font */
+         src: url('assets/astroz/Astroz Trial.ttf') format('truetype'); /* Correct format for .ttf files */
+         font-weight: normal;
+         font-style: normal;
+     }      
+
+     html {
+      scroll-behavior: smooth;
+    }
+      
+   body {
+         cursor: url('assets/UFO2.png'), auto;
+     }
+     
+     body{
+      min-height: 100vh;
+     }
+     
+      .paralax{
+         position: absolute;
+         height: 100%; 
+      }
+
+    
+      .paralax-item{
+         position: fixed;
+         width: 100%;
+         height: 100%;
+         top: 0;
+         left: 0;
+      }
+
+      .p-item-about {
+        
+         
+         
+     }
+   
+/*
+      #third {
+         background: url() center/cover no-repeat;
+         background-image: ;
+         color: white;
+         font-size: 18px; /* Reduced font size 
+         text-align: center;
+         background-color: rgba(203, 39, 39, 0.5);
+         padding: 50px; /* Reduced padding 
+         border-radius: 20px;
+         max-width: 10%; /* Control the width of the content box 
+         height: auto; /* Let the height adjust based on content 
+         margin-bottom: -400px; /* Adjusted the bottom margin 
+     }
+     
+     */
+     
+      .p-item1{
+         z-index: 1;
+         background: url(assets/1.png) center/cover no-repeat;
+         position: fixed;
+         
+      }
+      
+      
+      .p-item2{
+         position: relative;
+         top: 450;
+         left: -450;
+         z-index: 2;
+         background: url(hug.pn);
+         background-size: cover;
+         z-index: 1;
+         
+      }
+         
+      .p-item3{
+         background: url(assets/container3.png) bottom/100% no-repeat;
+         
+         background-size: cover;
+         background-position: center;              
+         z-index: 2; 
+      }
+
+      @media (max-width: 480px) {
+         .p-item3{
+            display: none;
+         }
+      }
+      
+      .p-item4{
+         position: relative;
+         top: 0;
+         left: 0;
+         width: 10000%;
+         height: 100%;
+         content: '';
+         background: url(.png) repeat-x;
+         background-size: cover;
+         background-position: center;
+         animation: marquee 20s linear infinite;
+         z-index: 3;
+      }
+      
+      @keyframes marquee{
+         0%{
+            transform: translate3d(0,0,0);
+         }
+         100%{
+            transform: translate3d(-200vw,0,0);
+         }
+      }
+
+      .container{
+         position: relative;
+         z-index: 1;
+        
+         right: -100px;
+         margin-top: 50vh;
+
+        
+      }
+      
+
+      
+
+      
+
+.content{
+         position: fixed; 
+         right: -500px;
+          width: 200px;
+          height: auto;
+          margin-right: 40px;
+}
+
+.content2{
+         width: 500px;
+         height: 500px;
+         position: relative; 
+         right: -500px;
+          width: 200px;
+          height: auto;
+          margin-right: 40px;
+}
+
+
+
+nav{
+   font-family: 'CustomFont', sans-serif; 
+   position: fixed;
+   top: 0;
+   right: 0;
+   width: 100%;
+   padding: 10px 30px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   z-index: 5;
+   
+}
+
+nav :first-child{
+   margin-right: auto;
+   margin-left: 20px;
+}
+
+   
+nav ul{
+   font-family: 'CustomFont', sans-serif; 
+   width: 100%;
+   list-style: none;
+   display: flex;
+   justify-content: flex-end;
+   align-items: center;
+}
+
+
+
+
+nav ul {
+   font-family: 'CustomFont', sans-serif; 
+
+    display: flex;
+    justify-content: flex-end;
+    list-style-type: none;
+    margin: 0;
+    padding: 17px;
+}
+
+nav ul li a {
+   font-family: 'CustomFont', sans-serif; 
+   position: relative;
+    margin-left: 1em;
+    text-decoration: none;
+   
+
+}  
+nav ul li a::after{
+   position:absolute;
+   bottom: -3px;
+   left: 0;
+   content: '';
+   width: 0;
+   height: 3px;
+   transition: all 0.2s linear ;
+}
+
+nav ul li a:hover::after{
+   width: 100%;
+   background-color: white;
+}  
+
+nav a {
+    text-decoration:none;
+    color: white;
+    font-size: 18px;
+    font-family: Helvetica, sans-serif;
+
+}
+
+nav a:hover {
+    transition: all 0.5s;
+    color: #55138d;
+}
+nav img {
+    color: #55138d;
+    width: 1.3em;
+    height: auto;
+    top: 0;
+    filter: contrast(1.235) brightness(1.9);
+    transition: 1s;
+
+
+}
+
+nav img:hover{
+
+    filter: brightness(75);
+
+
+}
+.menu-button{
+   display: none;
+   
+
+}
+
+
+
+
+/* Sidebar styles on the right */
+nav.sidebar {
+   position: fixed;
+   top: 0;
+   right: 0; /* Changed from left: 0; to right: 0; */
+   width: 250px; /* Adjust the width as needed */
+   height: 100%;
+   padding: 20px;
+   display: none;
+   flex-direction: column;
+   align-items: flex-start;
+   background-color: rgba(48, 57, 89, 0.01); /* Adjust the background color */
+   z-index: 6;
+   backdrop-filter: blur(100px);
+}
+
+
+nav.sidebar li{
+   width: 100%;
+
+}
+nav.sidebar ul {
+   width: 100%;
+   list-style: none;
+   padding: 0;
+   margin: 0;
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+}
+
+nav.sidebar ul li {
+   width: 100%;
+   margin-bottom: 1em;
+}
+
+nav.sidebar ul li a {
+   display: block;
+   width: 100%;
+   padding: 10px;
+   text-decoration: none;
+   color: white;
+   font-size: 18px;
+   font-family: Helvetica, sans-serif;
+   position: relative;
+   transition: color 0.3s ease;
+}
+
+nav.sidebar ul li a:hover {
+   color: #8b56ba; /* Change the text color on hover */
+}
+
+nav.sidebar ul li a::after {
+   position: absolute;
+   bottom: 0;
+   left: 0;
+   content: '';
+   width: 0;
+   height: 3px;
+   background-color: white;
+   transition: all 0.2s linear;
+}
+
+nav.sidebar ul li a:hover::after {
+   width: 100%;
+}
+
+nav.sidebar img {
+   width: 1.3em;
+   height: auto;
+   filter: contrast(1.235) brightness(1.9);
+   transition: 1s;
+}
+
+nav.sidebar img:hover {
+   filter: brightness(75);
+}
+
+
+@media(max-width:700px){
+   .hideOnMobile{
+      display: none;
+   }
+   
+   .menu-button{
+      display: block;
+   }
+   .body{
+      overflow-x: hidden;
+   }
+}
+
+html{
+   overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+
+
+.border{
+   display: grid;
+   place-items: center;
+   align-items: center;
+   min-height: 100vh;
+  
+}
+
+
+.box{
+   height: 250px;
+   width: 250px;
+   background-color: red;
+   font-size: 20px;
+   
+}
+
+.border{
+   opacity: 0;
+   transition: all 1s;
+}
+
+.show{
+   opacity: 1;
+}
+
+.background{
+   background-color: #8b56ba rgba(203, 39, 39, 0.5);
+}
+
+
+
+#about {
+   margin-left: 150px;
+   margin-top: -200px;
+   padding: 4rem 0;
+   background: #000; /* Dark background for contrast */
+   color: #fff; /* Light text for readability */
+}
+
+/* Grid Layout */
+.grid-container {
+  
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+   gap: 20px;
+   align-items: center;
+   max-width: 1200px;
+   margin: 0 auto;
+   padding: 0 20px;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+.text-box {
+   z-index: 3;
+   font-family: 'CustomFont';
+   top: -40px;
+   margin-top: 320px;
+   z-index: 2;
+   background: rgba(10, 10, 10, 0.422); /* Darker */
+   border: 2px solid rgba(255, 255, 255, 0.3);
+   backdrop-filter: blur(5px);
+   padding: 2rem;
+   border-radius: 15px;
+   box-shadow: 0 0 20px rgba(0, 255, 255, 0.5), 0 0 10px rgba(0, 255, 255, 0.5);
+   position: relative;
+   overflow: hidden;
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+   transition: transform 0.3s ease;
+   transform-style: preserve-3d;
+}
+
+
+
+/* Animated Gradient Border */
+/*
+.text-box::before {
+   z-index: 4;
+   content: "";
+   position: absolute;
+   top: -5px;
+   left: -5px;
+   right: -5px;
+   bottom: -5px;
+   opacity: 0.5;
+   background: linear-gradient(10deg, #00ffff, #b21d3b, #259b8b93, #9d9191);
+   background-size: 400% 400%;
+   z-index: -1;
+   filter: blur(10px);
+   animation: gradient-move 6s infinite;
+}
+*/
+.text-box::before {
+   z-index: 3;
+   content: "";
+   position: absolute;
+   top: 0; left: 0; right: 0; bottom: 0;
+   background: url('starfield.gif') center/cover no-repeat; /* or a CSS gradient animation */
+   opacity: 0.2;
+   z-index: -2; /* behind the gradient border layer */
+   transform: perspective(800px) rotateX(5deg) rotateY(-5deg);
+   
+
+ }
+
+
+
+.text-box h2 {
+   font-size: 2rem;
+   margin-bottom: 1rem;
+   color: #00ffff;
+   text-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+}
+
+.text-box p {
+   font-size: 1.3rem;
+   color: #eee;
+   line-height: 1.8;
+   text-shadow: 0 0 3px rgba(0, 0, 0, 0.7);
+}
+
+
+
+
+
+/*
+@keyframes gradient-move {
+   0% {
+       background-position: 0% 50%;
+   }
+   50% {
+       background-position: 100% 50%;
+   }
+   100% {
+       background-position: 0% 50%;
+   }
+} */
+
+
+   
+
+   @keyframes flicker {
+      0%, 19%, 21%, 60%, 64%, 100% {
+        opacity: 1;
+      }
+      20%, 63% {
+        opacity: 0.1;
+      }
+    }
+
+    /* The keyframes controlling the gradient movement */
+    @keyframes borderAnim {
+      0% {
+        background-position: 0% 50%; 
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+    
+
+    
+    
+
+.icons {
+   z-index: 2;
+   position: absolute;
+   top: 70%;
+   right: 10%;
+   display: flex;
+   gap: 20px;
+}
+
+.icons img {
+   z-index: 3;
+   width: 50px;
+   height: 50px;
+   filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.5));
+   transition: transform 0.3s, filter 0.3s;
+}
+
+.icons img:hover {
+   z-index: 2;
+   transform: scale(1.2);
+   filter: drop-shadow(0 0 20px rgba(255, 255, 255, 1));
+}
+
+/* Solar System Wrapper */
+.solar-system {
+   margin-top: -200px;
+   margin-right: 100px;
+   z-index: 3;
+   position: absolute;
+   top: 50%;
+   right: 10%;
+   width: 250px;
+   height: 250px;
+   border: 2px dashed rgba(255, 255, 255, 0.2); /* Circular boundary */
+   border-radius: 50%;
+   animation: rotate-system 12s linear infinite;
+   transform-origin: center;
+}
+
+/* Center (Sun) */
+.solar-system .center {
+   z-index: 3;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   width: 30px;
+   height: 30px;
+   background: #ffcc00;
+   border-radius: 50%;
+   transform: translate(-50%, -50%);
+   box-shadow: 0 0 15px rgba(255, 204, 0, 0.8);
+}
+
+/* Planets (Clickable Icons) */
+
+
+
+.planet {
+ 
+   position: absolute;
+   width: 40px;
+   height: 40px;
+   top: 50%;
+   left: 50%;
+   transform-origin: -100px; /* Distance from center */
+   animation: orbit 6s linear infinite;
+   transform: rotate(0deg) translateX(-100px);
+}
+
+.planet img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   border-radius: 50%; /* Make icons circular */
+   box-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+   transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Hover Effect */
+.planet img:hover {
+   transform: scale(1.2);
+   box-shadow: 0 0 15px rgba(255, 255, 255, 1);
+}
+
+/* Instagram Planet (Custom Orbit) */
+.planet.instagram {
+   z-index: 1;
+   animation-delay: 0s;
+   animation-duration: 7s;
+   transform-origin: -90px; /* Closer orbit */
+}
+
+/* LinkedIn Planet (Custom Orbit) */
+.planet.linkedin {
+   z-index: 2;
+   animation-delay: 2s;
+   animation-duration: 14s;
+   transform-origin: -130px; /* Wider orbit */
+}
+
+.planet.github {
+   z-index: 3;
+   animation-delay: 4s;
+   animation-duration: 25s;
+   transform-origin: -160px; /* Wider orbit */
+}
+
+
+
+/* Animation for Orbiting Planets */
+@keyframes orbit {
+   from {
+       transform: rotate(0deg) translateX(-100px);
+   }
+   to {
+       transform: rotate(360deg) translateX(-100px);
+   }
+}
+
+/* Animation for the Solar System */
+@keyframes rotate-system {
+   from {
+       transform: rotate(0deg);
+   }
+   to {
+       transform: rotate(360deg);
+   }
+}
+
+
+
+
+
+
+
+.skills-shelf {
+   z-index: 3;
+   text-align: center;
+   padding: 50px 20px;
+   position: relative;
+}
+
+.skills-shelf h2 {
+   font-size: 2em;
+   margin-bottom: 20px;
+}
+
+.skills-shelf p {
+   max-width: 600px;
+   margin: 0 auto 40px;
+   line-height: 1.5;
+}
+
+.crystal-wrapper {
+   display: flex;
+   justify-content: center;
+   gap: 30px;
+   perspective: 1000px; /* Allows 3D transforms */
+   flex-wrap: wrap; /* Wrap if window is small */
+}
+
+.crystal {
+   background: rgba(255, 255, 255, 0.05);
+   backdrop-filter: blur(5px);
+   border: 1px solid rgba(255,255,255,0.1);
+   width: 200px;
+   padding: 20px;
+   border-radius: 12px;
+   position: relative;
+   cursor: pointer;
+   transition: transform 0.3s ease;
+   transform-style: preserve-3d;
+   overflow: hidden;
+}
+
+/* 3D Flip on Hover */
+.crystal:hover {
+   transform: rotateX(10deg) scale(1.05);
+}
+
+/* Front content - always visible */
+.crystal-front {
+   backface-visibility: hidden;
+}
+
+/* Hidden details initially */
+.crystal-details {
+   display: none;
+   margin-top: 20px;
+   line-height: 1.4;
+}
+
+.crystal-details h4 {
+   margin-bottom: 10px;
+   font-size: 1.1em;
+}
+
+/* Click to open (show details) */
+.crystal.open .crystal-details {
+   display: block;
+   animation: slideDown 0.3s ease forwards;
+}
+
+/* Slide-down animation for details */
+@keyframes slideDown {
+   0% { opacity: 0; transform: translateY(-10px); }
+   100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Optional styling for lists */
+.crystal-details ul {
+   list-style: none;
+   padding: 0;
+}
+.crystal-details li {
+   margin-bottom: 5px;
+}
+
+.crystal {
+   box-shadow: 0 0 15px rgba(255,255,255,0.1);
+}
+.crystal:hover {
+   box-shadow: 0 0 20px rgba(255,255,255,0.3);
+}
+
+
+
+.project-timeline-section {
+   margin-top: 100px ;
+   z-index: 3  ;
+   text-align: center;
+   padding: 50px 20px;
+   position: relative;
+}
+
+.project-timeline-section h2 {
+   font-size: 2em;
+   margin-bottom: 20px;
+}
+
+.project-timeline-section p {
+   max-width: 600px;
+   margin: 0 auto 40px;
+   line-height: 1.5;
+}
+
+.project-timeline-controls {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   gap: 15px;
+   margin-bottom: 30px;
+}
+
+.arrow-btn {
+   background: rgba(0, 255, 255, 0.1);
+  color: #00ffff;
+  border: 2px solid #00ffff;
+  padding: 0.7rem 1rem;
+  border-radius: 6px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s, transform 0.3s;
+}
+.arrow-btn:hover {
+   background: #00ffff;
+   color: #000; /* contrast when hovered */
+   transform: scale(1.05);
+ }
+
+.project-timeline-slider {
+   width: 300px;
+}
+
+.project-timeline-container {
+   width: 100%;
+   overflow: hidden;
+   position: relative;
+   height: 150px;
+   margin-bottom: 50px;
+}
+
+.project-timeline-track {
+   display: flex;
+   align-items: center;
+   position: relative;
+   transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Markers for the projects */
+.project-marker {
+  
+   width: 20px;
+   height: 20px;
+   background: linear-gradient(45deg, #00ffff, #00ffcc);
+   border-radius: 50%;
+   margin: 0 100px;
+   position: relative;
+   cursor: pointer;
+   box-shadow: 0 0 15px rgba(0,255,255,0.6), inset 0 0 5px rgba(255,255,255,0.5);
+}
+
+.project-marker:hover {
+   transform: scale(1.2);
+}
+
+/* The holographic line behind markers */
+.project-timeline-track::before {
+   content: "";
+   position: absolute;
+   left: 0; right: 0;
+   height: 4px;
+   background: linear-gradient(to right, rgba(0,255,255,0.2), rgba(0,255,255,0.8), rgba(0,255,255,0.2));
+   top: 50%;
+   transform: translateY(-50%);
+   z-index: -1;
+}
+
+/* Info Panel */
+/* Project Info Panel: Futuristic + Readable */
+.project-info-panel {
+   position: static;                 /* If you want it inline below the timeline */
+   margin: 2rem auto 0;
+   max-width: 400px;                 /* Restricts width for readability */
+   
+   /* Dark gradient background with slight transparency for a sci-fi feel */
+   background: linear-gradient(
+     135deg,
+     rgba(0, 0, 0, 0.9),
+     rgba(10, 10, 10, 0.7)
+   );
+ 
+   /* Neon-style border */
+   border: 2px solid #00ffff;
+   border-radius: 12px;
+ 
+   /* Subtle neon glow around the panel */
+   box-shadow:
+     0 0 20px rgba(0,255,255,0.2),
+     0 0 10px rgba(0,255,255,0.4);
+ 
+   /* Spacing & typography */
+   padding: 1.5rem;
+   color: #fff;                /* White text for high contrast */
+   font-size: 1rem;
+   line-height: 1.6;
+   font-family: sans-serif;    /* Or your custom/futuristic font */
+ 
+   /* Appear animation */
+   opacity: 0;
+   pointer-events: none;
+   transform: translateY(10px);
+   transition: opacity 0.3s, transform 0.3s;
+ }
+ 
+ /* Show state triggered by JS (e.g., when a project marker is centered/selected) */
+ .project-info-panel.show {
+   opacity: 1;
+   pointer-events: auto;
+   transform: translateY(0);
+ }
+ 
+ /* Title inside the panel */
+ .project-info-title {
+   margin-top: 0;
+   margin-bottom: 0.5rem;
+   color: #00ffff;          /* Neon accent color for headings */
+   font-size: 1.3rem;
+   font-weight: 600;
+   font-family: 'Orbitron', sans-serif; /* or whichever futuristic font */
+ }
+ 
+ /* Description inside the panel */
+ .project-info-description {
+   margin: 0;
+   color: #fff;             /* Keep it white for contrast */
+   font-size: 1rem;
+   line-height: 1.6;
+ }
+ 
+
+
+
+.project-textbox {
+   position: relative;
+   padding: 20px 30px;
+   max-width: 600px;
+   text-align: center;
+   font-family: 'Orbitron', sans-serif; /* Futuristic font */
+   font-size: 1.2rem;
+   color: #e0e0e0;
+
+   /* Futuristic Panel Look */
+   background: linear-gradient(135deg, rgba(0, 255, 255, 0.2), rgba(0, 0, 0, 0.8));
+   border: 1px solid rgba(0, 255, 255, 0.5);
+   border-radius: 15px;
+   box-shadow: 
+       0 0 15px rgba(0, 255, 255, 0.4),
+       0 0 30px rgba(0, 255, 255, 0.2);
+   backdrop-filter: blur(10px);
+   overflow: hidden;
+   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.project-textbox:hover {
+   transform: translateY(-10px) scale(1.03);
+   box-shadow: 
+       0 0 30px rgba(0, 255, 255, 0.6),
+       0 0 60px rgba(0, 255, 255, 0.4);
+}
+
+/* Decorative Glow Lines */
+.project-textbox::before,
+.project-textbox::after {
+   content: '';
+   position: absolute;
+   z-index: 0;
+   width: 100%;
+   height: 3px;
+   background: linear-gradient(90deg, transparent, rgba(0, 255, 255, 0.6), transparent);
+   animation: scan-lines 3s linear infinite;
+}
+
+.project-textbox::before {
+   top: 0;
+}
+
+.project-textbox::after {
+   bottom: 0;
+}
+
+/* Glowing Animation */
+@keyframes scan-lines {
+   0% {
+       transform: translateX(-100%);
+   }
+   100% {
+       transform: translateX(100%);
+   }
+}
+
+/* Subtle Sparkles for Background */
+.project-textbox::before {
+   content: '';
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background: url('https://www.transparenttextures.com/patterns/tiny-grid.png');
+   opacity: 0.1;
+   animation: sparkles 5s infinite alternate;
+}
+
+@keyframes sparkles {
+   from {
+       opacity: 0.1;
+   }
+   to {
+       opacity: 0.3;
+   }
+}
+ 
+ /* Fade in animation for modal */
+ @keyframes fadeIn {
+   from {opacity: 0;}
+   to {opacity: 1;}
+ }
+ 
+
+
+
+.education-constellation {
+   scroll-margin-top: 1px; 
+   top: 300px;
+   text-align: center;
+   padding: 60px 20px;
+   position: relative;
+}
+
+.education-constellation h2 {
+   z-index: 2;
+   font-size: 2em;
+   margin-bottom: 20px;
+   font-family: 'Orbitron', sans-serif;
+}
+
+.education-constellation p {
+   z-index: 2;
+   max-width: 600px;
+   margin: 0 auto 40px;
+   line-height: 1.5;
+}
+
+.constellation-container {
+   z-index: 3;
+   position: relative;
+   width: 100%;
+   height: 500px; 
+   max-width: 800px;
+   margin: 0 auto;
+   overflow: visible;
+}
+
+.constellation-lines {
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   left: 0;
+   top: 0;
+}
+
+.constellation-lines line {
+   z-index: 3;
+   stroke: rgba(255,255,255,0.5);
+   stroke-width: 2;
+   stroke-linecap: round;
+}
+
+.planet-wrapper {
+   position: absolute;
+   transform: translate(-50%, -50%);
+   z-index: 3;
+   text-align: center;
+}
+
+/* Planets with text inside */
+.planet2 {
+   z-index: 3;
+   width: 110px;
+   height: 110px;
+   background: radial-gradient(circle at center, #003cff, #b96e0c);
+   border-radius: 50%;
+   box-shadow: 0 0 15px rgba(2, 83, 83, 0.5), inset 0 0 10px rgba(255,255,255,0.2);
+   cursor: pointer;
+   transition: transform 0.3s, box-shadow 0.3s;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   overflow: hidden; /* Ensures text stays within the circle */
+}
+
+.planet2:hover {
+   transform: scale(1.5);
+   box-shadow: 0 0 20px rgba(0,255,255,0.7), inset 0 0 10px rgba(255,255,255,0.4);
+}
+
+.planet2-text {
+   color: #e8eaed;
+   font-size: 0.9em;
+   font-family: 'Orbitron', sans-serif;
+   text-align: center;
+   text-shadow: 0 0 3px rgba(0,255,255,0.3);
+   pointer-events: none;
+}
+
+/* Tooltip and Modal remain unchanged */
+.planet2-tooltip {
+   z-index: 3;
+   position: absolute;
+   background: rgba(0,0,0,0.7);
+   padding: 10px 15px;
+   border-radius: 8px;
+   color: #e8eaed;
+   font-size: 0.9em;
+   opacity: 0;
+   pointer-events: none;
+   transition: opacity 0.2s;
+   max-width: 220px;
+   line-height: 1.4;
+   text-align: left;
+   z-index: 999;
+}
+
+.detail-modal {
+   z-index: 3;
+   position: fixed;
+   top: 0; left: 0; right: 0; bottom: 0;
+   background: rgba(0,0,0,0.7);
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   z-index: 1000;
+}
+
+.detail-content {
+   z-index: 3;
+   background: rgba(255,255,255,0.1);
+   backdrop-filter: blur(10px);
+   padding: 20px;
+   border-radius: 8px;
+   width: 300px;
+   text-align: left;
+   border: 1px solid rgba(255,255,255,0.1);
+   color: #e8eaed;
+}
+
+.detail-content h3 {
+   z-index: 3;
+   margin-top: 0;
+   font-family: 'Orbitron', sans-serif;
+   margin-bottom: 10px;
+}
+
+.close-modal {
+   z-index: 3;
+   background: rgba(255,255,255,0.1);
+   border: none;
+   color: #e8eaed;
+   padding: 5px 10px;
+   border-radius: 4px;
+   cursor: pointer;
+   margin-top: 10px;
+}
+
+.close-modal:hover {
+   z-index: 3;
+   background: rgba(255,255,255,0.2);
+}
+
+.text-box2 {
+   z-index: 2;
+   font-family: 'CustomFont', sans-serif;
+   position: relative;
+   max-width: 700px;          /* Restrict width for responsiveness */
+   margin: 2rem auto;         /* Center horizontally, add vertical spacing */
+   background: rgba(10, 10, 10, 0.42);
+   border: 2px solid rgba(255, 255, 255, 0.3);
+   backdrop-filter: blur(5px);
+   padding: 2rem;
+   border-radius: 15px;
+   box-shadow: 0 0 20px rgba(0, 255, 255, 0.5),
+               0 0 10px rgba(0, 255, 255, 0.5);
+   overflow: hidden;
+   /* If you truly need a 2-column layout for text: 
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+   */
+ }
+ 
+ /* Animated background in ::before */
+ .text-box2::before {
+   content: "";
+   position: absolute;
+   top: 0; left: 0; right: 0; bottom: 0;
+   background: url('starfield.gif') center/cover no-repeat;
+   opacity: 0.2;
+   z-index: -1;
+   /* Remove perspective/rotate unless you specifically want it to tilt the background */
+   /* transform: perspective(800px) rotateX(5deg) rotateY(-5deg); */
+ }
+ 
+ .text-box2 h2 {
+   font-family: 'CustomFont', sans-serif;
+   font-size: 2rem;
+   margin-bottom: 1rem;
+   color: #00ffff;
+ }
+ 
+ .text-box2 p {
+   font-size: 1.2rem;
+   color: #eee;
+   line-height: 1.8;
+   margin-top: 1rem;
+ }
+ 
+
+@media (max-width:600px) {
+   /* Adjust the about section so it's not pushed off-screen */
+   #about {
+     margin-left: 0;
+     margin-top: 0;
+     padding: 2rem 1rem;
+   }
+
+   /* The text box should not have a huge top margin on small screens */
+   .text-box {
+     margin-top: 20px;
+     padding: 1rem;
+     font-size: 1rem;
+     border-radius: 10px;
+     /* Ensure it fits well on small screens */
+     max-width: 90%;
+     margin-left: auto;
+     margin-right: auto;
+     /* Simplify the grid inside text-box to a single column if needed */
+     grid-template-columns: 1fr;
+   }
+
+   .text-box h2 {
+     font-size: 1.5rem;
+   }
+
+   .text-box p {
+     font-size: 1rem;
+     line-height: 1.5;
+   }
+
+   /* Icons should not be absolutely positioned on iPhone screens */
+   .icons {
+     position: static;
+     margin: 20px auto 0;
+     justify-content: center;
+   }
+
+   .icons img {
+     width: 40px;
+     height: 40px;
+   }
+
+   /* Solar system below the text box on iPhone */
+   /* Remove absolute positioning and let it flow naturally below the text box */
+   .solar-system {
+     position: static;
+     margin: 20px auto 0;
+     right: auto;
+     top: auto;
+     width: 200px;
+     height: 200px;
+     animation: none; /* Optional: remove rotation animation on mobile if desired */
+     transform: none;
+     border: 2px dashed rgba(255, 255, 255, 0.2);
+   }
+
+   .solar-system .center {
+     width: 20px;
+     height: 20px;
+   }
+
+   /* Adjust orbiting planets if needed for smaller screens */
+   .planet {
+     width: 30px;
+     height: 30px;
+     transform-origin: -70px; /* Slightly closer orbit for small screens */
+     animation-duration: 8s; /* Slightly slower if desired */
+   }
+
+   .planet img {
+     box-shadow: 0 0 5px rgba(255, 255, 255, 0.6);
+   }
+
+   .text-box {
+      margin-top: 100px;
+      z-index: 2;
+      background: rgba(255, 255, 255, 0.1); /* Transparent white */
+      border: 2px solid rgba(255, 255, 255, 0.3); /* Semi-transparent border */
+      padding: 2rem;
+      border-radius: 15px; /* Rounded corners */
+      box-shadow: 0 0 20px rgba(0, 255, 255, 0.5), 0 0 10px rgba(0, 255, 255, 0.5); /* Glow effect */
+      position: relative;
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+   
+   }
+   
+
+}
+
+/* Optional: For specific mobile views */
+@media (max-width: 480px) {
+    html, body {
+        overflow-x: hidden; /* Disable all scrolling on small screens */
+    }
+}
+
+
+@media (max-width: 480px) {
+   .solar-system {
+      top: 100px;
+      position: relative; /* Ensure relative positioning within its container */
+      margin: 20px auto; /* Center horizontally */
+      width: 220px; /* Adjust size for mobile */
+      height: 220px; /* Adjust size for mobile */
+      display: flex; /* Align Sun and planets in the center */
+      justify-content: center; /* Center horizontally */
+      align-items: center; /* Center vertically */
+   }
+
+   .solar-system .center {
+      position: absolute; /* Centralized within .solar-system */
+      width: 35px; /* Increased size of the Sun */
+      height: 35px; /* Increased size of the Sun */
+      background: #ffcc00; /* Sun color */
+      border-radius: 50%; /* Keep it circular */
+      transform: translate(-50%, -50%); /* Ensure exact centering */
+      box-shadow: 0 0 20px rgba(255, 204, 0, 1); /* Enhanced glow effect */
+   }
+
+   .planet {
+      position: absolute; /* Orbiting around the Sun */
+      width: 40px; /* Adjust planet size */
+      height: 40px;
+      top: 167px;
+      transform-origin: 0 -100px; /* Proper orbit radius from the Sun */
+      animation: orbit 6s linear infinite; /* Maintain orbit animation */
+      transform: rotate(0deg); /* Initial rotation position */
+   }
+
+   .planet img {
+      width: 100%; /* Ensure planet image fills its container */
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%; /* Circular planets */
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.6); /* Glow */
+      transition: transform 0.3s, box-shadow 0.3s; /* Smooth hover effects */
+   }
+
+   .planet img:hover {
+      transform: scale(1.2); /* Enlarge on hover */
+      box-shadow: 0 0 15px rgba(255, 255, 255, 1);
+   }
+
+   /* Instagram Planet (Custom Orbit) */
+   .planet.instagram {
+      z-index: 3;
+      animation-delay: 0s;
+      animation-duration: 7s;
+      transform-origin: 0 -50px; /* Closer orbit */
+   }
+
+   /* LinkedIn Planet (Custom Orbit) */
+   .planet.linkedin {
+      z-index: 2;
+      animation-delay: 0s;
+      animation-duration: 14s;
+      transform-origin: 0-100px; /* Wider orbit */
+   }
+
+   .planet.github {
+      z-index: 3;
+      animation-delay: 0s;
+      animation-duration: 25s;
+      transform-origin: 0 -140px; /* Widest orbit */
+   }
+
+   .education-constellation {
+      margin-top: -400px;
+      scroll-margin-top: -200px; 
+      text-align: center;
+      padding: 60px 20px;
+      position: relative;
+   }
+
+   
+   .constellation-lines line {
+      z-index: 3;
+      stroke: rgba(255,255,255,0.5);
+      stroke-width: 3;
+      stroke-linecap: round;
+   }
+   
+   .planet-wrapper {
+      position: absolute;
+      transform: translate(-50%, -50%);
+      z-index: 3;
+      text-align: center;
+   }
+
+  
+
+   /* Animation for Orbiting Planets */
+   @keyframes orbit {
+      from {
+         transform: rotate(0deg); /* Start at 0 degrees */
+      }
+      to {
+         transform: rotate(360deg); /* Complete a full circle */
+      }
+   }
+
+}
+
+@keyframes appear{
+   from{
+      opacity: 0;
+      scale: 0.5;
+   }
+   to {
+      opacity: 1;
+      scale: 1;
+   }
+}
+
+
+
+ 
+ /* Skills Section */
+ .skills {
+   z-index: 3;
+   padding: 5rem 2rem;
+   max-width: 1200px;
+   margin: 0 auto;
+   text-align: center;
+   position: relative;
+ }
+ 
+ .skills-content h2 {
+   font-size: 3rem;
+   margin-bottom: 1.5rem;
+   letter-spacing: 1px;
+   text-transform: uppercase;
+   color: #fff;
+   text-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+ }
+ 
+ .skills-content p {
+   font-size: 1.2rem;
+   max-width: 700px;
+   margin: 0 auto 3rem;
+   line-height: 1.5;
+   color: #cfcfcf;
+ }
+ 
+ /* Skills Grid */
+ .skills-grid {
+   display: grid;
+   grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+   gap: 2rem;
+   justify-items: center;
+   padding: 0 2rem;
+ }
+ 
+ /* Skill Items */
+ .skill-item {
+   z-index: 3;
+   background: linear-gradient(135deg, rgba(255,255,255,0.05), rgba(255,255,255,0.15));
+   border-radius: 15px;
+   width: 150px;
+   height: 150px;
+   font-weight: 600;
+   letter-spacing: 0.5px;
+   color: #ffffff;
+   position: relative;
+   transition: transform 0.5s ease, box-shadow 0.5s ease;
+   font-size: 1.1rem;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   box-shadow: 0 0 10px rgba(0,0,0,0.5);
+ }
+ 
+ /* On Hover: Pulsing Glow and Rotating Ring */
+ .skill-item:hover {
+   transform: translateY(-8px);
+   box-shadow: 
+     0 0 15px rgba(255,255,255,0.3),
+     0 0 30px rgba(123,104,238,0.3),
+     0 0 60px rgba(147,112,219,0.3);
+ }
+ 
+ /* Pulsing border glow */
+ .skill-item:hover::before {
+   content: "";
+   position: absolute;
+   inset: 0;
+   border-radius: 15px;
+   pointer-events: none;
+   box-shadow: 0 0 20px 10px rgba(147,112,219,0.2), inset 0 0 20px 10px rgba(147,112,219,0.2);
+   opacity: 0;
+   animation: pulse 1.5s forwards;
+ }
+ 
+ /* Rotating ring around the skill item */
+ .skill-item:hover::after {
+   content: "";
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   width: 160px;
+   height: 160px;
+   border-radius: 50%;
+   border: 2px solid rgba(147,112,219,0.5);
+   transform: translate(-50%, -50%);
+   animation: spin 2s linear infinite;
+   pointer-events: none;
+ }
+ 
+ /* Pulsing animation */
+ @keyframes pulse {
+   0% {opacity: 0;}
+   50% {opacity: 1;}
+   100% {opacity: 0;}
+ }
+ 
+ /* Spinning animation for the ring */
+ @keyframes spin {
+   0% {transform: translate(-50%, -50%) rotate(0deg);}
+   100% {transform: translate(-50%, -50%) rotate(360deg);}
+ }
+ 
+
+ /* Keyframes for the scanning line */
+ @keyframes scan {
+   0% {
+     left: -100%;
+   }
+   50% {
+     left: 0%;
+   }
+   100% {
+     left: 100%;
+   }
+ }
+
+ 
+ /* *******************************
+   Projects Section Container
+******************************** */
+
+
+.my-projects-section {
+   
+   margin-top: -1px;
+   position: relative;
+   z-index: 3;              /* Ensures it's on top of lower layers (like parallax) */
+   padding: 4rem 2rem;      /* Some spacing around the section */
+   max-width: 1200px;
+   margin: 0 auto;          /* Center the section horizontally */
+   text-align: center;
+   /* Optional background if needed:
+      background: rgba(0, 0, 0, 0.3);
+      backdrop-filter: blur(5px);
+   */
+   margin-bottom: 4rem;
+ }
+
+/* Responsive Tweaks */
+@media (max-width: 480px) {
+   .flip-card {
+     width: 200px;
+     height: 300px;
+   }
+}
+
+/* Add spacing between sections or grid rows if needed */
+ .my-projects-title {
+   
+   margin-top: 250px;
+   font-size: 2rem;
+   margin-bottom: 2rem;
+   color: #00ffff; /* Futuristic neon color */
+   text-transform: uppercase;
+   z-index: 3;
+ }
+ 
+ /* *******************************
+    Responsive Grid for Flip Cards
+ ******************************** */
+ .my-projects-grid {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+   gap: 2rem;               /* Space between cards */
+   justify-items: center;   /* Center the cards in each grid cell */
+   perspective: 1000px;     /* For 3D flip effect */
+   padding: 1rem;           /* Spacing around the grid */
+   z-index: 3;
+}
+
+ 
+ /* *******************************
+    Individual Flip Card Container
+ ******************************** */
+ .flip-card {
+   position: relative;
+   z-index: 3;
+   width: 250px;      /* Fixed width to ensure a stable flip */
+   height: 350px;     /* Fixed height so front & back align perfectly */
+   transform-style: preserve-3d;
+   transition: transform 0.8s ease;
+   cursor: pointer;
+ }
+ 
+ /* When hovering over the card, flip the inner content */
+ .flip-card:hover .flip-card-inner {
+   transform: rotateY(180deg);
+ }
+ 
+ /* The "inner" that actually flips */
+ .flip-card-inner {
+   position: relative;
+   width: 100%;
+   height: 100%;
+   transform-style: preserve-3d;
+   transition: transform 0.8s ease;
+   z-index: 3;
+ }
+ 
+ /* *******************************
+    Front/Back Faces
+ ******************************** */
+ .flip-card-front,
+ .flip-card-back {
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   top: 0; left: 0;
+   border-radius: 10px;
+   backface-visibility: hidden;
+   -webkit-backface-visibility: hidden; /* For Safari/iOS */
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+ 
+   color: #ffffff;       /* White text for contrast */
+   text-align: center;
+   padding: 1rem;
+   box-sizing: border-box;
+   /* Example "glass" or "futuristic" background */
+   background: rgba(0, 0, 0, 0.4);
+   border: 2px solid rgba(255, 255, 255, 0.2);
+   box-shadow: 0 0 15px rgba(0,255,255,0.3),
+               0 0 5px rgba(0,255,255,0.2);
+ }
+ 
+ /* Front face is 0deg by default */
+ .flip-card-front {
+   background: rgba(10, 10, 10, 0.7);
+   transform: rotateY(0deg);
+   border-color: rgba(0,255,255,0.4);
+ }
+ 
+ /* Back face is rotated 180deg so it's hidden initially */
+ .flip-card-back {
+   transform: rotateY(180deg);
+   background: rgba(10, 10, 10, 0.7);
+   border-color: rgba(0,255,255,0.4);
+ }
+ 
+ /* Heading & text on the front */
+ .flip-card-front h3,
+ .flip-card-front p {
+   margin: 0.5rem 0;
+   font-family: 'Orbitron', sans-serif; /* Or your custom space font */
+ }
+ 
+ /* Heading & text on the back */
+ .flip-card-back h3 {
+   margin-bottom: 0.5rem;
+   font-family: 'Orbitron', sans-serif;
+   color: #ff00d0;
+ }
+ 
+ .flip-card-back p {
+   font-size: 1rem;
+   margin-bottom: 1rem;
+   font-family: 'Roboto', sans-serif;
+ }
+ 
+ /* GitHub link on the back */
+ .flip-card-back a {
+   margin-top: 0.5rem;
+   color: #000;
+   background: #00ffff;
+   padding: 0.5rem 1rem;
+   text-decoration: none;
+   border-radius: 5px;
+   transition: background 0.3s, transform 0.3s;
+ }
+ 
+ .flip-card-back a:hover {
+   background: #fff;
+   transform: scale(1.05);
+ }
+ 
+ /* *******************************
+    Responsive Tweaks
+ ******************************** */
+ @media (max-width: 480px) {
+   /* Make the cards smaller on narrow screens */
+   .flip-card {
+     width: 200px;
+     height: 300px;
+   }
+ }
+ 
